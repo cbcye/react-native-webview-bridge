@@ -15,6 +15,7 @@
 'use strict';
 
 import React from 'react';
+import ReactNative from 'react-native';
 import invariant from 'invariant';
 import keyMirror from 'keymirror';
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
@@ -239,7 +240,7 @@ updateNavigationState: function(event: Event) {
 },
 
 getWebViewBridgeHandle: function(): any {
-  return React.findNodeHandle(this.refs[RCT_WEBVIEWBRIDGE_REF]);
+  return ReactNative.findNodeHandle(this.refs[RCT_WEBVIEWBRIDGE_REF]);
 },
 
 onLoadingStart: function(event: Event) {
